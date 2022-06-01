@@ -52,3 +52,5 @@
                 })
                 
             });
+ + Note : cretae file .env -> copy .env.example .env
+ 
