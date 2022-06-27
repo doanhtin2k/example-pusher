@@ -54,3 +54,11 @@
             });
  + Note : cretae file .env -> copy .env.example .env
  
++ example use guzzleHttp
+    Route::get("/call_api", function() {
+    $client = new GuzzleHttp\Client();
+    $apiRequest = $client->request('GET', 'https://api.github.com/users/hadley/orgs');
+    $content = json_decode($apiRequest->getBody()->getContents());
+    dd($content[0]);
+    //return $client->request('http://192.168.20.151/api/demo')->getBody()->getContents();
+});
